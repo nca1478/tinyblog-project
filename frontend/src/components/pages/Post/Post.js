@@ -1,11 +1,10 @@
 // Dependencies
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Col, Container, Row, Image } from 'react-bootstrap'
 import { toast, ToastContainer } from 'react-toastify'
 
 // Custom Dependencies
-import { AuthContext } from '../../../context/authContext'
 import imagePost from '../../../assets/img/post.jpg'
 import { get, put } from '../../../config/api'
 import { parsePostDetails } from './helpers'
@@ -13,7 +12,6 @@ import { Paginate } from './components'
 
 export const PostPage = () => {
   const navigate = useNavigate()
-  const { user } = useContext(AuthContext)
   const { postId } = useParams()
   const [post, setPost] = useState({})
   const [posts, setPosts] = useState([])
@@ -52,11 +50,11 @@ export const PostPage = () => {
   }, [post.id, posts])
 
   const updatePostVisits = useCallback(async () => {
-    await put(`/posts/${postId}/visits`, {}, user.data.token).catch((error) => {
+    await put(`/posts/${postId}/visits`, {}, null).catch((error) => {
       toast.error('Error al intentar actualizar número de visitas del post.')
       console.log(error)
     })
-  }, [postId, user])
+  }, [postId])
 
   const handleClickPrev = () => {
     navigate(`/post/${posts[prevPage]}/details`, { replace: false })

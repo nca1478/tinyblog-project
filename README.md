@@ -1,35 +1,35 @@
 # Tinyblog Project
 
-`Tinyblog` es una aplicación web que permite llevar un pequeño blog donde se pueda listar, ver, crear, editar y eliminar publicaciones, con el objetivo de analizar el comportamiento de los usuarios dentro de la aplicación, relacionado al contenido.
+`Tinyblog` es una aplicación web desarrollada en React, que permite llevar un pequeño blog donde se pueda listar, ver, crear, editar y eliminar publicaciones, con el objetivo de analizar el comportamiento de los usuarios dentro de la aplicación, relacionado al contenido.
 
-## URL's App
+## URL's del Proyecto
 
-- [Tinyblog App](https://tinyblog-njca.netlify.app/)
-- [Tinyblog Api](https://tinyblog-api-production.up.railway.app/)
+- [Frontend](https://tinyblog-njca.netlify.app/)
+- [Backend](https://tinyblog-api-production.up.railway.app/)
 
 ## Requerimientos
 
 - Nodejs v16.17.1.
 - React 18.2.0.
 
-## Descarga del Projecto
+## Descarga del Proyecto
 
 - Ir al repo del proyecto.
 - git clone o Download Zip.
 
-## Instalación Api (desde directorio /backend)
+## Instalación Api (directorio /backend)
 
 > npm install
 
-## Instalación App (desde directorio /frontend)
+## Instalación App (directorio /frontend)
 
 > npm install
 
-## Ejecutar Api (desde directorio /backend)
+## Ejecutar Api (directorio /backend)
 
 > npm run dev
 
-## Ejecutar App (desde directorio /frontend)
+## Ejecutar App (directorio /frontend)
 
 > npm start
 
@@ -51,7 +51,13 @@
 - Controles para publicar, editar y eliminar posts.
 - Acceso a los detalles del post.
 - Botones de navegación en el post.
-- Vista con métricas web.
+
+## Métricas Web para Analítica
+
+- Total Visitas al Blog.
+- Total Visitas de todos los Posts.
+- Post más Visitado.
+- Post menos Visitado.
 
 ## Características de la Api
 
@@ -60,6 +66,7 @@
 - Endpoints para Métricas.
 - Endpoints protegidos con JSON Web Tokens.
 - Modelos y Base de Datos en MySQL.
+- Tablas: Users, Posts y Metrics.
 - ORM de Base de Datos: Sequelize.
 
 ## Características Técnicas
